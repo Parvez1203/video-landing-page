@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$dark-background-color : rgb(21, 22, 24);
+$primary-color : #fff;
+$regular-font-size : 1em;
+$title-font-size : 3em;
+$medium-font-size : 2em;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: $dark-background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 100px 0 100px;
+    max-width: 1500px;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.logo{
+    text-decoration: none;
+    color: $primary-color;
+    font-size: $medium-font-size;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
+.image_container{
+    max-width: 90px;
+}
+
+img{
+    width: 100%;
+}
+
+.back_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.banner{
+    position : relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    left: 0;
+}
+
+.banner .text{
+    position: relative;
+    max-width: 600px;
+    margin-right: 2em;
+}
+
+.banner .text h1{
+    color: $primary-color;
+    font-size: $title-font-size;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.banner .text p{
+    font-size: $regular-font-size;
+    color: rgb(197, 184, 184);
+    margin-bottom: 3em;
+}
+
+.banner .text a{
+   color: black;
+   font-size: 1.2em;
+   text-decoration: none;
+   background: whitesmoke;
+   border: 2px solid black;
+   padding: 8px 12px;
+   text-transform: capitalize;
+   font-weight: 600;
+   border-radius: 4px;
+}
+
+.banner .video_container{
+    position: relative;
+    width: 100%;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.banner .video_container .windowed_video{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width: 900px){
+    .banner{
+        top: 200px;
+        flex-direction: column;
+        max-height: 100%;
+        justify-content: flex-start;
+    }
+
+    .banner .text{
+        min-width: 100% ;
+        margin-bottom: 2em;
+    }
+
+    .banner .video_container{
+        min-width: 300px;
+    }
+}
